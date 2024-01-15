@@ -4,6 +4,8 @@ import { status } from "@/utils";
 import React, { FC } from "react";
 import { Draggable, Droppable } from "react-beautiful-dnd";
 
+plugins: [require("daisyui")];
+
 type PropsType = {
   board: {
     id: string;
@@ -35,7 +37,7 @@ const Board: FC<PropsType> = ({ board, handleOpen }) => {
             </h1>
             {board.hasBtn && (
               <button
-                className="btn btn-circle btn-success text-black text-large"
+                className="btn p-2 text-black text-large bg-green-500"
                 onClick={handleOpen}
               >
                 +
@@ -70,10 +72,10 @@ const Board: FC<PropsType> = ({ board, handleOpen }) => {
                     </div>
                     <div className="flex flex-col items-start mt-2">
                       <p className="">
-                        Author: <span className="ml-5 ">{name}</span>
+                        Author: <span className="ml-5">insert name</span>
                       </p>
                       <p className="">
-                        Date: <span>Null</span>
+                        Date: <span>insert date</span>
                       </p>
                     </div>
                   </div>
